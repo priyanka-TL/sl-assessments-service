@@ -1,15 +1,15 @@
 FROM node:12
 
-WORKDIR /manage-learn-services/sl-assessment-service
+WORKDIR /opt/assessment
 
 #copy package.json file
-COPY package.json /manage-learn-services/sl-assessment-service
+COPY package.json /opt/assessment
 
 #install node packges
 RUN npm install
 
 #copy all files 
-COPY . /manage-learn-services/sl-assessment-service
+COPY . /opt/assessment
 
 #expose the application port
 EXPOSE 4201
